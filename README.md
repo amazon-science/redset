@@ -1,18 +1,48 @@
-## My Project
-
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
-* Write in your license below and create a LICENSE file
+## Redset
+Redset is a dataset containing three months worth of user query metadata that
+ran on a selected sample of instances in the Amazon Redshift fleet. We provide
+query metadata for 200 provisioned and serverless instances each.
 
 ## Security
-
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
 ## License
+Redset © 2024 by Amazon is licensed under Creative Commons
+Attribution-NonCommercial 4.0 International.
 
-This library is licensed under the LICENSE NAME HERE License.
+## Download
+The dataset will be published by VLDB 2024 (August 26-30 2024). We will amend
+instructions for downloading here once it is available.
 
+## Schema
+| Column | Name	Description	|
+| ------ | ---------------- |
+| instance_id |	Uniquely identifies a redshift cluster |
+| cluster_size | Size of the cluster (only available for provisioned) |
+| user_id |	Identifies the user that issued the query |
+| database_id |	Identifies the database that was queried |
+| query_id | Unique per instance |
+| arrival_time | Timestamp when the query arrived on the system |
+| compile_duration_ms |	Time the query spent compiling in milliseconds |
+| queue_duration_ms | Time the query spent queueing in milliseconds |
+| execution_duration_ms | Time the query spent executing in milliseconds |
+| feature_fingerprint |	Hash value of the query fingerprint. A proxy for query-likeness, though not based on text. Will overestimate repetition. |
+| was_aborted |	Whether the query was aborted during its lifetime |
+| was_cached | Whether the query was answered from result cache |
+| cache_source_query_id | If query was answered from result cache, this is the query id for the query which populated the cache |
+| query_type | Type of query, e.g.., `select`, `copy`, ... |
+| num_permanent_tables_accessed | Number of permanent table accesses by the query (regular database table) |
+| num_external_tables_accessed | Number of [external tables](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_EXTERNAL_TABLE.html) accessed by the query |
+| num_system_tables_accessed | Number of [system tables](https://docs.aws.amazon.com/redshift/latest/dg/cm_chap_system-tables.html) accessed by the query |
+| read_table_ids | Comma separated list of unique permanent table ids read by the query |
+| write_table_ids |	Comma separated list of unique table ids written to by the query |
+| mbytes_scanned | Total number of megabytes scanned by the query |
+| mbytes_spilled | Total number of megabytes spilled by the query |
+| num_joins | Number of joins in the query plan |
+| num_scans | Number of scans in the query plan |
+| num_aggregations | Number of aggregations in the query plan |
+
+## Citation
+```
+TODO: bibtex citation once paper is published by conference
+```
