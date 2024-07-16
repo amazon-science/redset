@@ -11,8 +11,30 @@ Redset © 2024 by Amazon is licensed under Creative Commons
 Attribution-NonCommercial 4.0 International.
 
 ## Download
-The dataset will be published by VLDB 2024 (August 26-30 2024). We will amend
-instructions for downloading here once it is available.
+Folder structure:
+* s3://redshift-downloads/redset
+  * README
+  * LICENSE
+  * provisioned/
+    * full.parquet
+    * sample_0.01.parquet (1% uniform random data sample)
+    * sample_0.001.parquet (0.1% uniform random data sample)
+    * parts/
+      * One individual `<id>.parquet` file per cluster
+  * serverless/
+    * full.parquet
+    * sample_0.01.parquet (1% uniform random sample)
+    * sample_0.001.parquet (0.1% uniform random data sample)
+    * parts/
+      * One individual `<id>.parquet` file per cluster
+
+You can either download files using their http link, e.g.,
+https://s3.amazonaws.com/redshift-downloads/redset/LICENSE
+Or interact with the s3 bucket using the [AWS CLI](https://aws.amazon.com/cli/).
+For example, to download the full serverless dataset you can run:
+```
+aws s3 cp --no-sign-request s3://redshift-downloads/redset/serverless/full.parquet .
+```
 
 ## Schema
 | Column | Name	Description	|
@@ -44,5 +66,5 @@ instructions for downloading here once it is available.
 
 ## Citation
 ```
-TODO: bibtex citation once paper is published by conference
+TODO: bibtex citation will be available once paper is published (VLDB 2024).
 ```
