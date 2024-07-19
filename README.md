@@ -44,7 +44,7 @@ aws s3 cp --no-sign-request s3://redshift-downloads/redset/serverless/full.parqu
 | user_id |	Identifies the user that issued the query |
 | database_id |	Identifies the database that was queried |
 | query_id | Unique per instance |
-| arrival_time | Timestamp when the query arrived on the system |
+| arrival_timestamp | Timestamp when the query arrived on the system |
 | compile_duration_ms |	Time the query spent compiling in milliseconds |
 | queue_duration_ms | Time the query spent queueing in milliseconds |
 | execution_duration_ms | Time the query spent executing in milliseconds |
