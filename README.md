@@ -66,5 +66,11 @@ aws s3 cp --no-sign-request s3://redshift-downloads/redset/serverless/full.parqu
 
 ## Citation
 ```
-TODO: bibtex citation will be available once paper is published (VLDB 2024).
+@Inproceedings{Renen2024,
+  author = {Alexander van Renen and Dominik Horn and Pascal Pfeil and Kapil Eknath Vaidya and Wenjian Dong and Murali Narayanaswamy and Zhengchun Liu and Gaurav Saxena and Andreas Kipf and Tim Kraska},
+  title = {Why TPC is not enough: An analysis of the Amazon Redshift fleet},
+  year = {2024},
+  url = {https://www.amazon.science/publications/why-tpc-is-not-enough-an-analysis-of-the-amazon-redshift-fleet},
+  booktitle = {VLDB 2024},
+}
 ```
