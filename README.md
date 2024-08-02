@@ -65,6 +65,7 @@ aws s3 cp --no-sign-request s3://redshift-downloads/redset/serverless/full.parqu
 | num_aggregations | Number of aggregations in the query plan |
 
 ## Citation
+You may find the paper, e.g., [here](https://assets.amazon.science/24/3b/04b31ef64c83acf98fe3fdca9107/why-tpc-is-not-enough-an-analysis-of-the-amazon-redshift-fleet.pdf).
 ```
 @Inproceedings{Renen2024,
   author = {Alexander van Renen and Dominik Horn and Pascal Pfeil and Kapil Eknath Vaidya and Wenjian Dong and Murali Narayanaswamy and Zhengchun Liu and Gaurav Saxena and Andreas Kipf and Tim Kraska},
