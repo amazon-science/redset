@@ -3,6 +3,8 @@ Redset is a dataset containing three months worth of user query metadata that
 ran on a selected sample of instances in the Amazon Redshift fleet. We provide
 query metadata for 200 provisioned and serverless instances each.
 
+<mark style="background-color: lightyellow">As stated in the [paper](https://assets.amazon.science/24/3b/04b31ef64c83acf98fe3fdca9107/why-tpc-is-not-enough-an-analysis-of-the-amazon-redshift-fleet.pdf), Redset is not intended to be representative of Redshift as a whole. Instead, Redset provides biased sample data to support the development of new benchmarks for these specific workloads. For fleet analysis and sampling methodology please take a look at the paper.</mark>
+
 ## Security
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
@@ -65,7 +67,7 @@ aws s3 cp --no-sign-request s3://redshift-downloads/redset/serverless/full.parqu
 | num_aggregations | Number of aggregations in the query plan |
 
 ## Citation
-You may find the paper, e.g., [here](https://assets.amazon.science/24/3b/04b31ef64c83acf98fe3fdca9107/why-tpc-is-not-enough-an-analysis-of-the-amazon-redshift-fleet.pdf).
+You may find the paper [here](https://assets.amazon.science/24/3b/04b31ef64c83acf98fe3fdca9107/why-tpc-is-not-enough-an-analysis-of-the-amazon-redshift-fleet.pdf).
 ```
 @Inproceedings{Renen2024,
   author = {Alexander van Renen and Dominik Horn and Pascal Pfeil and Kapil Eknath Vaidya and Wenjian Dong and Murali Narayanaswamy and Zhengchun Liu and Gaurav Saxena and Andreas Kipf and Tim Kraska},
